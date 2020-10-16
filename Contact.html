@@ -11,49 +11,68 @@ Zoom:1.0;
 Width: extend-to-zoom;
 }
 
+.header{  
+  position: none;   
+  width: 100%;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+  overflow:hidden;
+  background:linear-gradient(to left,rgba(236, 236, 236, 0),rgba(236, 236,236,6));
+                
+       }
+ .header a{
+  
+  float: left;
+  color:rgb(86, 86, 119);
+  text-align: center;
+  padding: 10px 5px;
+  text-decoration:none;
+  font-family: Italic,'Times New Roman', Times, serif;
+  font-size: 2vw; 
+  line-height: 25px;
+  border-radius: 15px;
+       }
+       .header a.logo{
+              background-image: silver;
+              color:cadetblue;
+               font-weight: bolder;
+               font-size: 35px;
+               font-family: cursive;
+       }
+       .header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+  background-color:rgb(4, 63, 65);
+  color: white;
+}
+
+.header-right {
+  float: right;
+  
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right{
+         float:none;
+  }
+  
+}
+
 .Body1{
 Background-color:black;
 Background: linear-gradient(to bottom right, #ffffff, #33334d);
 }
 
-.fixed1{position:absolute;
-       top: 10px;
-       right: 350px;
-       Font-family:"Brush Script MT"; "Times New Roman";
-       font-size: 40px;
-       Float:right;
-       Color:navy;
-       Text-decoration:none;
-       
-}
 
 
-.fixed2{position: absolute;
-        top: 10px;
-         right: 255px;
-          Font-family:"Brush Script MT"; "Times New Roman";
-         font-size: 40px;
-         Float:right;
-         Color:navy;
-       Text-decoration:none;}
-
-.fixed3{position:absolute;
-       top: 10px;
-       right: 160px;
-       Font-family:"Brush Script MT"; "Times New Roman";
-       font-size: 40px;
-       Float:right;
-       Color:navy;
-       Text-decoration:none;}
-
-.fixed4{position: absolute;
-        top: 10px;
-         right: 15px; 
-        Font-family:"Brush Script MT"; "Times New Roman";
-         font-size: 40px;
-         Float:right;
-         Color:Navy;
-       Text-decoration:none;}
 .div1{
 Text-align: left;
 Font-family:Copperplate;
@@ -61,7 +80,16 @@ Font-size:30px;
 Margin:0px;
 Float:left;
 padding: 50px 1px;
+position:none;
+top:100px;
 }
+@media screen and (max-width:500px) {
+       .div1{
+              top:300px;
+       }
+       
+}
+
 .div2{
 Text-align: left;
 Font-family:optima;
@@ -69,7 +97,18 @@ Font-size:30px;
 Margin:0px;
 Float:left;
 Color:#29293d;
-padding: 50px 1px;
+padding: 30px 1px;
+position:none;
+top: 100px;
+left: 900px;
+}
+@media screen and (max-width:500px) {
+       .div2{
+              float:left;
+              top:500px;
+              left:0px
+       }
+       
 }
 
 input[type=submit]
@@ -80,52 +119,49 @@ Margin: 20px 10px;
 padding: 10px 52px;
 Font-size:20px;
 }
-.div3{
-width: 100%;
-  height: 50px;
-  Background-image:url('pictures/banner-1.jpg');
-  background-size: 100% 100%;
-  border: 1px solid silver;
-}
+
 </style>
  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
 <body class="body1">
-
-
-<div class="div3"
-<img src="pictures/basket.jpg">
-</div>
+       <div class="header">
+              <a class="logo">Maa's Catering</a>
+                    <div class="header-right"><i>
+             <a  href="./Index.html">Home</a>
+             <a  href="./Menu.html">-Menu</a>
+             <a  href="./Order.html">-Order</a>
+             <a class="active" href="./Contact.html">-Contact</a>
+              <a  href="./About us.html">-About Us</a></i>
+             </div>
+             </div>     
+<br>
+<br>
 
 <div class="div1">
 <p1>Have a question or comment? Email or call us.
 </p1><br><br>
-<i style="font-size:24px;padding:6px 55px" class="fas fa-phone-volume"></I>
+<i style="font-size:24px;padding:6px 5px" class="fas fa-phone-volume"></I>
 Catering:347-476-2224
 <br><br>
-<I style="font-size:24px;padding:6px 55px" class="fas fa-envelope-open"></I>
+<I style="font-size:24px;padding:6px 5px" class="fas fa-envelope-open"></I>
 Maas.catering347@gmail.com
 </div>
-
+<br>
+<br>
 <div class="div2">
 <p3>
 <form action="mailto:maas.catering347@gmail.com" method="post"enctype="text/plain">
 <p1>
 NAME*:<input type="text" style="background-color:white"size="30"><br>
 EMAIL*:<input type="text" style="background-color:white" size="30"><br><br>
-<textarea name=feedback rows="10" cols="40" style="background-color:#f0f0f5; font-size:20px">MESSAGE</textarea><br><br>
+<textarea name=feedback rows="10" cols="40" style="background-color:#f0f0f5; font-size:20px; padding:0px;">MESSAGE</textarea><br><br>
 </p3>
 <input type="submit" name="submit" value="submit">
 </form>
 </div>
 
-<br><br>
-<a class="fixed1" href="./Index.html">-Home</a><br>
-<a class="fixed2" href="./Menu.html">-Menu</a><br>
-<a class="fixed3" href="./order.html">-Order</a><br>
-<a class="fixed4" href="./About us.html">-About Us</a><br>
 
 
  

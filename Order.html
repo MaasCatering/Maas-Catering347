@@ -4,9 +4,60 @@
 <meta name="viewport" content="width=device-width">
 
 <style>
-@viewport{
-Zoom:1.0;
-Width: extend-to-zoom;
+.header{  
+  position: none;   
+  width: 100%;
+  background-color: transparent;
+  padding: 20px 10px;
+  overflow: hidden;
+  background: linear-gradient(to left,rgba(236, 236, 236, 0),rgba(236, 236,236,6));;
+                
+       }
+ .header a{
+  
+  float: left;
+  color:white;
+  text-align: center;
+  padding: 10px 5px;
+  text-decoration:none;
+  font-family: Italic,'Times New Roman', Times, serif;
+  font-size: 2vw; 
+  line-height: 25px;
+  border-radius: 15px;
+       }
+       .header a.logo{
+              background-image: silver;
+              color:cadetblue;
+               font-weight: bolder;
+               font-size: 35px;
+               font-family: cursive;
+       }
+       .header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+  background-color:rgb(4, 63, 65);
+  color: white;
+}
+
+.header-right {
+  float: right;
+  
+}
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+    font: 60px;
+    color:rgb(86, 86, 119);
+  }
+  .header-right{
+         float:none;
+  }
+  
 }
 
 Html{
@@ -14,76 +65,33 @@ Overflow-y:hiddden;}
 
 Body{
 Background-repeat: no-repeat;
-Background-image:url('pictures/wood2.jpg');
-Background-size:2000px;
-}
-.div1{
-  width: 100%;
-  height: 50px;
-  Background-image:url('pictures/banner-1.jpg');
-  background-size: 100% 100%;
-  border: 1px solid silver;
+Background-image:url('wood2.jpg');
+background-position: center;
+background-size: cover;
 }
 
-.fixed1{position:absolute;
-       top: 10px;
-       right: 380px;
-       font-size: 40px;
-Font-family:"Brush Script MT"; "Times New Roman";
-       Float:right;
-       Color:navy;
-       Text-decoration:none;}
 
 
-.fixed2{position: absolute;
-        top: 10px;
-         right: 280px;  
-       Font-family:"Brush Script MT"; "Times New Roman";
-         font-size: 40px;
-         Float:right;
-         Color:navy;
-       Text-decoration:none;}
-
-.fixed3{position:absolute;
-       top: 10px;
-       right: 160px;
-       Font-family:"Brush Script MT";"Times New Roman";
-       font-size: 40px;
-       Float:right;
-       Color:navy;
-       Text-decoration:none;}
-
-.fixed4{position: absolute;
-        top: 10px;
-         right: 15px;
-         Font-family:"Brush Script MT";"Times New Roman";
-         font-size: 40px;
-         Float:right;
-         Color:navy;
-       Text-decoration:none;}
 
 .iframe{
-position: absolute;
-    top: 100px;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    border: 0;
+position:none;
+    
 }
+
 .message {
-Position:absolute;
-Top:100px;
-Left:650px;
+margin:0 auto;
+Position:none;
+Top:none;
 Color:white;
- Background-image:linear-gradient( blue, cyan);
- Width:30%;
- Height:200px;
+ Background-image:linear-gradient( rgb(148, 148, 230), rgb(171, 233, 233));
+ Width:90%;
+ Height:100px;
  Text-align:center;
 Font-family:Monaco;
  Font-size:19px;
  Padding:20px;
- Position: absolute;
- Border:40px solid #red;
+ align-self: center;
+ 
 
    
 }
@@ -92,28 +100,34 @@ Font-family:Monaco;
 </head>
 
 <body>
-<div class="div1"></div><br>
 
-<a 
+<body class="body1">
+       <div class="header">
+              <a class="logo">Maa's Catering</a>
+                    <div class="header-right"><i>
+             <a  href="./Index.html">Home</a>
+             <a  href="./Menu.html">-Menu</a>
+             <a class="active" href="./Order.html">-Order</a>
+             <a  href="./Contact.html">-Contact</a>
+              <a  href="./About us.html">-About Us</a></i>
+             </div>
+             </div>  
+   
+   <br><br>
+
+   <div class="message">
+       <p>
+       Dear Customers if the Ordering Form doesn't respond click on this link below:
+       <b></p>
+       <a href="https://forms.gle/AciSKBJ11ujNBPgKA">Ordering Form</a>
+       
+       </div><br><br>
 
 <div class="iframe">
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScqqp0KBANxPDKVz6Hs6Y7UKkKXVvmKyjzkeMS7YlIbtWTX3Q/viewform?embedded=true"  width="640" height="702" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> 
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScqqp0KBANxPDKVz6Hs6Y7UKkKXVvmKyjzkeMS7YlIbtWTX3Q/viewform?embedded=true"  width="100%" height="100%" frameborder="none" marginheight="none" marginwidth="none">Loading…</iframe> 
 
 </div>
 
-<a class="fixed1" href="./Index.html">-Home</a><br>
-<a class="fixed2" href="./Menu.html">-Menu</a><br>
-<a class="fixed3" href="./Contact.html">-Contact</a><br>
-<a class="fixed4" href="./About us.html">-About Us</a><br>
- 
-<div class="message">
-<p>
-
-Dear Customers if the Ordering Form doesn't respond click on this link below:
-<b></p>
-<a href="https://forms.gle/AciSKBJ11ujNBPgKA">Ordering Form</a>
-
-</d>
 
 
 
